@@ -13,7 +13,8 @@ ___
 
 # <strong>Notes </strong>
 <div>
-in the name dont allow use upper case letter like <b><i><u>Redux </u></i></b>
+in the name dont allow use upper case letter like <b><i><u>Redux </u></i></b> 
+
 just use lowercase
 </div>
 
