@@ -2,3 +2,5 @@
 
 _today will learn readux in react readex
 How change status using redux_
+
+# thanks
