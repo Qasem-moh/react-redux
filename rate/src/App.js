@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import One from "./Components/One";
+import ToggleThemeBtn from "./Components/ToggleTheme"
 import { LoginFu, LoginCl } from "./login";
 
 // function App() {
@@ -23,16 +24,19 @@ class App extends React.Component {
   state = {
     theme: 'dark'
   }
-  toggleTheme() {
+  toggleTheme=()=> {
     this.setState({
       theme:this.state.theme==='dark'?'light':'dark'
     })
   }
   render() {
     return (
-      <div style={{background:this.state.theme=='dark'?'blue':'white'}}>
+      <div
+        style={{ background: this.state.theme == "dark" ? "blue" : "white" }}
+      >
         <h2>Hi from App</h2>
         <One theme={this.state.theme} />
+        <ToggleThemeBtn toggleTheme={ this.toggleTheme}/>
       </div>
     );
   }
