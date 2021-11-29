@@ -5,11 +5,11 @@ function Two(props) {
     return (
         <div>
             <h2 style={{
-                color: theme === "dark" ? "white" : "blue"
+                color: ThemeContext.theme === "dark" ? "white" : "blue"
             }}>
                 Hi from Two
             </h2>
-            <p>Theme:{theme}</p>
+            <p>Theme:{ThemeContext.theme}</p>
         </div>
     );
 }
