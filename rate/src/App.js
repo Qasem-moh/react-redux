@@ -25,21 +25,21 @@ class App extends React.Component {
   state = {
     theme: 'dark'
   }
-  toggleTheme=()=> {
+  toggleTheme = () => {
     this.setState({
-      theme:this.state.theme==='dark'?'light':'dark'
+      theme: this.state.theme === 'dark' ? 'light' : 'dark'
     })
   }
   render() {
     return (
       <ThemeContext.Provider value={{
-        'theme':this.state.theme
+        'theme': this.state.theme
       }}>
         <div
           style={{ background: this.state.theme == "dark" ? "blue" : "white" }}
         >
           <h2>Hi from App</h2>
-          <One  />
+          <One />
           <ToggleThemeBtn toggleTheme={this.toggleTheme} />
         </div>
       </ThemeContext.Provider>
