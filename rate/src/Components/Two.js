@@ -1,11 +1,18 @@
 import React from "react";
+import ThemeContext from "../Context/ThemeContext";
 function Two(props) {
     return (
+
         <div>
-            <h2 style={{ color: props.theme === "dark" ? "white" : "blue" }}>
-                Hi from Two
-            </h2>
-            <p>theme:{props.theme}</p>
+            <ThemeContext.Consumer>
+                {({ theme }) => <>
+                    <h2 style={{ color: theme === "dark" ? "white" : "blue" }}>
+                        Hi from Two
+                    </h2>
+                    <p>theme:{theme}</p>
+                </>
+                }
+            </ThemeContext.Consumer>
         </div>
     );
 }

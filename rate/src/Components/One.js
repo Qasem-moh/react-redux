@@ -1,12 +1,12 @@
-import React from 'react'
-import Two from './Two'
-function one(props) {
+import React from "react";
+import Two from "./Two";
+function one() {
     return (
-      <div>
-        <h2>Hi from One</h2>
-        <Two theme={props.theme} />
-      </div>
+        <div>
+            <h2>Hi from One</h2>
+            <Two />
+        </div>
     );
 }
 
-export default one
+export default one;
