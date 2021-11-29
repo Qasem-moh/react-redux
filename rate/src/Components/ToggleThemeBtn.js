@@ -1,23 +1,17 @@
 import React from "react";
 import ThemeContext from "../Context/ThemeContext";
 class ToggleThemeBtn extends React.Component {
-    componentDidCatch() {
-        console.log(theme);
+    componentDidUpdate() {
+        console.log(this.context .theme);
     }
     render() {
         return (
             <div>
-                <ThemeContext.Consumer>
-                    {({ theme, toggleTheme }) => <>
-                        <button onClick={toggleTheme}>
-                            Toggle theme to {theme === "dark" ? "white" : "dark"}
-                        </button>
-                    </>
-                    }
-                </ThemeContext.Consumer>
+                <button onClick={this.context .toggleTheme}>
+                    Toggle theme to {this.context .theme === "dark" ? "white" : "dark"}
+                </button>
             </div>
         );
-
     }
 }
 
