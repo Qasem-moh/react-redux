@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export class LoginCl extends React.Component {
     state = {
@@ -50,6 +50,19 @@ export class LoginCl extends React.Component {
 export function LoginFu() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+
+    useEffect(() => {
+        console.log("Function Component did Mount");
+
+        return () => {
+            console.log("Function component Did un mount");
+        };
+    }, []);
+
+    useEffect(() => {
+        if (email === "") return;
+        console.log("Function Component did Update");
+    }, [email]);
 
     function handleEmail(e) {
         setEmail(e.target.value);
