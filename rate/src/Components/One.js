@@ -7,7 +7,7 @@ function one() {
         <div>
             <h2>Hi from One</h2>
             <Two />
-            <ToggleThemeBtn/>
+            {/* <ToggleThemeBtn/> */}
         </div>
     );
 }

@@ -26,7 +26,7 @@ class App extends React.Component {
         >
           <h2>Hi from App</h2>
           <One />
-          <ToggleThemeBtn />
+          <ToggleThemeBtn toggleTheme={ this.toggleTheme}/>
         </div>
       </ThemeContext.Provider>
     );

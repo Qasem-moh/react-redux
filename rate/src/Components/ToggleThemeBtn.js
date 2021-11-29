@@ -4,11 +4,12 @@ function ToggleThemeBtn(props) {
     return (
         <div>
             <ThemeContext.Consumer>
-                {({ theme }) => {
+                {({ theme }) => <>
                     <button onClick={props.toggleTheme}>
-                        Toggle theme to {theme == "dark" ? "light" : "dark"}
+                        Toggle theme to
                     </button>
-                }}
+                </>
+                }
             </ThemeContext.Consumer>
         </div>
     );
