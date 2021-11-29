@@ -1,15 +1,14 @@
 import React from "react";
 import ThemeContext from "../Context/ThemeContext";
-import Two from "./Two";
 function ToggleThemeBtn(props) {
     return (
         <div>
             <ThemeContext.Consumer>
-                {({ theme }) => { }}
-
-                <button onClick={props.toggleTheme}>
-                    Toggle theme to {theme == "dark" ? "white" : "dark"}
-                </button>
+                {({ theme }) => {
+                    <button onClick={props.toggleTheme}>
+                        Toggle theme to {theme == "dark" ? "light" : "dark"}
+                    </button>
+                }}
             </ThemeContext.Consumer>
         </div>
     );
