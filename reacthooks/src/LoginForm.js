@@ -40,7 +40,7 @@ export class LoginCl extends React.Component {
                 <input
                     value={this.state.password}
                     onChange={this.handlePassworda}
-                    palceholder="password"
+                    placeholder="password"
                 />
             </div>
         );
@@ -72,9 +72,11 @@ export function LoginFu() {
     }
     return (
         <div>
-            <h2>Welcome</h2>
-            <input value={email} onChange={handleEmail} />
-            <input value={password} type="password" onChange={handlePassword} />
+            <h2>Example use function</h2>
+            <input value={email} onChange={handleEmail} placeholder="Email"
+            />
+            <input value={password} type="password" onChange={handlePassword} placeholder="password"
+            />
         </div>
     );
 }
