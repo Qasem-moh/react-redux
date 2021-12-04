@@ -5,11 +5,14 @@ export class LoginCl extends React.Component {
         email: "",
         password: "",
     };
-    componentDidCatch() {
+    componentDidMount() {
         console.log("class component Did mount");
     }
 
-    componentDidUpdate() {
+    componentDidUpdate(prevProps, prevState) {
+        if (prevState.email !== this.state.email) {
+            console.log("class Component: email did update");
+        }
         console.log("class Component did update");
     }
 
