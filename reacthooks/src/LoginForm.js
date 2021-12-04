@@ -10,7 +10,7 @@ export class LoginCl extends React.Component {
     }
 
     componentDidUpdate() {
-        console.log("class Component did upate");
+        console.log("class Component did update");
     }
 
     componentWillUnmount() {
