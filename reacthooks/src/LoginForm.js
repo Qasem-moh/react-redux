@@ -63,9 +63,22 @@ export function LoginFu() {
     }, []);
 
     useEffect(() => {
-        if (email === "") return;
+        if (email === "")
+            return;
         console.log("Function Component did Update");
+    });
+
+    useEffect(() => {
+        if (email === "")
+            return;
+        console.log("Function Component:email did Update");
     }, [email]);
+
+    useEffect(() => {
+        if (password === "")
+            return;
+        console.log("Function Component:password did Update");
+    }, [password]);
 
     function handleEmail(e) {
         setEmail(e.target.value);
