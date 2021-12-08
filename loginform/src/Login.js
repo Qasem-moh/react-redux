@@ -1,14 +1,14 @@
 import React, {useContext} from 'react';
 import {ThemeContext} from './ThemeContext';
 
-export default function Header(){
+export default function Login(){
     const themeContext = useContext(ThemeContext);
 
     let style = {};
 
     if(themeContext.theme === 'dark'){
         style = {
-            background:'blue',
+            background:'#000',
             color: '#fff'
         }
     } else {
@@ -17,10 +17,10 @@ export default function Header(){
             color: 'blue'
         }
     }
-
+    
     return (
         <div style={style}>
-            Header
+            Login
             <hr />
         </div>
     );

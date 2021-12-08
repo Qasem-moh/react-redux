@@ -1,13 +1,17 @@
-import React from 'react'
+import React from 'react';
+import { ThemeProvider } from './ThemeContext';
 import Header from './Header';
-import ThemeProvider from './ThemeContext';
+import Login from './Login';
+import ToggleTheme from './ToggleTheme';
 
 function App() {
   return (
     <div className="App">
-      {/* <ThemeProvider> */}
+      <ThemeProvider>
         <Header />
-    {/* </ThemeProvider> */}
+        <ToggleTheme />
+        <Login />
+      </ThemeProvider>
     </div>
   );
 }
