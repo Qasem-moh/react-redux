@@ -8,7 +8,15 @@ export default function Login() {
     const [password, setPassword] = useState('')
     function login(e) {
         e.preventDefault();
-        console.log({email,password});
+        console.log({ email, password });
+        //Send Api request to validate data and get token
+        if (password=='123') {
+            const token = "abc";
+            localStorage.setItem('token', token)
+            localStorage.setItem('email', email)
+        } else {
+            alert("Wrong details")
+        }
     }
     return (
         <form>
