@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { AuthContext } from './AuthContext';
 
 
 
@@ -6,6 +7,8 @@ import React, { useState } from 'react'
 export default function Login() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const authContext = useContext(AuthContext)
+
     function login(e) {
         e.preventDefault();
         console.log({ email, password });
@@ -14,6 +17,7 @@ export default function Login() {
             const token = "abc";
             localStorage.setItem('token', token)
             localStorage.setItem('email', email)
+            authContext.setAuth({token,email})
         } else {
             alert("Wrong details")
         }
