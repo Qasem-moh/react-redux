@@ -1,9 +1,9 @@
-import './App.css';
+import ClassComponents from "./Components/ClassComponents";
 
 function App() {
   return (
     <div className="App">
-
+      <ClassComponents />
     </div>
   );
 }
