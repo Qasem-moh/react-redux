@@ -5,7 +5,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   function increment() {
-    setCount(count + 1)
+    setCount(s=>s + 1)
   }
 
   const incrementCallBack=useCallback(increment,[])
